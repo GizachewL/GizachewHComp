@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduHub - Global Educational Platform. Learn, Share, and Grow Together.">
+  <meta name="theme-color" content="#10b981">
+  <title>EduHub - Global Learning Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>📚</text></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="logo">📚 EduHub</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#upload">Upload</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="fade-in">Learn Without Limits</h1>
+        <p class="fade-in-delayed">The Global Educational Platform for Everyone</p>
+        <p class="hero-description fade-in-delayed-2">Access thousands of resources, share your knowledge, and grow together with learners worldwide.</p>
+        <div class="hero-buttons fade-in-delayed-3">
+          <a href="#resources" class="btn btn-primary">Explore Resources</a>
+          <a href="#upload" class="btn btn-secondary">Share Knowledge</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Why Choose EduHub?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <h3>Comprehensive Resources</h3>
+          <p>Access educational materials including PDFs, videos, presentations, code, and more.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>Global Community</h3>
+          <p>Connect with learners and educators from around the world.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⬆️</div>
+          <h3>Easy Sharing</h3>
+          <p>Upload and share your knowledge instantly with the community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="resources">
+    <div class="container">
+      <h2>Browse Resources</h2>
+      <div class="filter-bar">
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="science">Science</option>
+          <option value="math">Mathematics</option>
+          <option value="tech">Technology</option>
+          <option value="language">Language</option>
+          <option value="history">History</option>
+          <option value="other">Other</option>
+        </select>
+        <button class="btn btn-sm" id="refreshResources">Refresh</button>
+      </div>
+      <div class="resources-grid" id="resourcesGrid">
+        <!-- Resources loaded dynamically from API -->
+        <p class="loading">Loading resources...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload Section -->
+  <section id="upload" class="upload">
+    <div class="container">
+      <h2>Share Your Knowledge</h2>
+      <div class="upload-container">
+        <div class="upload-info">
+          <div class="upload-icon">📤</div>
+          <h3>Contribute a Resource</h3>
+          <p>Fill in the details below. Your resource will appear in the community library after submission.</p>
+        </div>
+
+        <form class="upload-form" id="uploadForm">
+          <div class="form-group">
+            <label for="title">Resource Title *</label>
+            <input type="text" id="title" name="title" placeholder="Enter title" required>
+          </div>
+          <div class="form-group">
+            <label for="category">Category *</label>
+            <select id="category" name="category" required>
+              <option value="">Select category</option>
+              <option value="science">Science</option>
+              <option value="math">Mathematics</option>
+              <option value="tech">Technology</option>
+              <option value="language">Language</option>
+              <option value="history">History</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="type">Type</label>
+            <select id="type" name="type">
+              <option value="document">Document</option>
+              <option value="pdf">PDF</option>
+              <option value="video">Video</option>
+              <option value="code">Code</option>
+              <option value="presentation">Presentation</option>
+              <option value="image">Image</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description">Description *</label>
+            <textarea id="description" name="description" placeholder="Describe your resource" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="author">Your Name (optional)</label>
+            <input type="text" id="author" name="author" placeholder="Anonymous">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Resource</button>
+          <p class="form-message" id="uploadMessage"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="info-item">
+            <h3>📧 Email</h3>
+            <a href="mailto:gizachew599@gmail.com">gizachew599@gmail.com</a>
+          </div>
+          <div class="info-item">
+            <h3>💡 About</h3>
+            <p>Have questions, suggestions, or want to collaborate? Send us a message!</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 EduHub. Making education accessible to all.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
